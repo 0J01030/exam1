@@ -120,6 +120,9 @@ $commands = <<-EOM
 
 echo -e "%s/es/jp/g\\nw" | ed -/etc/apt/sources.list
 
+aptget update
+apt-get install -y apache2 php5
+
 EOM
 config.vm.provision :shell, inline: $commands
 
